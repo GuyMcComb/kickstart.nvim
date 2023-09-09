@@ -44,7 +44,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Guy 
-vim.keymap.set({'i','n', 'v'}, '<C-z>', 'u') 
+vim.keymap.set({'i','n', 'v'}, '<C-z>', 'u')
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
