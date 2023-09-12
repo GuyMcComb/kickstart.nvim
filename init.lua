@@ -44,7 +44,12 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Guy 
-vim.keymap.set({'i','n', 'v'}, '<C-z>', 'u')
+vim.keymap.set('i', '<C-z>', '')
+vim.keymap.set({'n', 'v'}, '<C-z>', 'u')
+vim.keymap.set('i', 'jk', '<Esc>', {})
+vim.keymap.set('n', '<leader>gc', ':Git commit -m')
+vim.keymap.set('n', '<leader>gp', ':Git push')
+vim.keymap.set('n', '<leader>ga', ':Git add')
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -458,8 +463,8 @@ end
 --  define the property 'filetypes' to the map in question.
 local servers = {
   -- clangd = {},
-  -- gopls = {},
-  -- pyright = {},
+  gopls = {},
+  pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
